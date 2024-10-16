@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Scam Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: var(--secondary-color);
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+        .incident-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .incident {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .incident:hover {
+            transform: translateY(-5px);
+        }
+        .incident h2 {
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+        }
+        .incident-details {
+            font-size: 0.9em;
+            color: #666;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .incident-details span {
+            margin-right: 15px;
+            margin-bottom: 5px;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            display: none;
+            font-size: 20px;
+            transition: opacity 0.3s;
+        }
+        #backToTop:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crypto Scam Tracker</h1>
+    <p class="subtitle">Documenting real cryptocurrency scam incidents to raise awareness.</p>
+
+    <ul class="incident-list">
+
+        <li class="incident">
+            <h2>Fake Coinbase Employee Call</h2>
+            <div class="incident-details">
+                <span><strong>Date:</strong> 2024-10-15</span>
+                <span><strong>Time:</strong> 15:57 PST</span>
+                <span><strong>Phone:</strong> +1 (888) 730-0862</span>
+                <span><strong>Origin:</strong>Unknown</span>
+            </div>
+            <div class="incident-details">
+                <span><strong>Date:</strong> 2024-10-15</span>
+                <span><strong>Time:</strong> 14:34 PST</span>
+                <span><strong>Phone:</strong> +1 (503) 877-8316</span>
+                <span><strong>Origin:</strong>Salem, OR</span>
+            </div>
+            <p>Initial call was automated/robo, indicating that an attempt to withdraw my assets had occurred, and that I should press "1" if I did not authorize it.  I pressed "1".  I received the second call.  A human (again possibly Eastern European, but different from earlier; honestly, I may have spoken with him a few months earlier in exact same scam) stated he was from Coinbase Consumer Asset Protection team (or something similar). I asked him to clarify multiple times and call ended.</p>
+        </li>
+        <li class="incident">
+            <h2>Fake Coinbase Employee Call</h2>
+            <div class="incident-details">
+                <span><strong>Date:</strong> 2024-10-15</span>
+                <span><strong>Time:</strong> 9:03 PST</span>
+                <span><strong>Phone:</strong> +1 (415) 843-1515</span>
+                <span><strong>Origin:</strong>Mill Valley, CA</span>
+            </div>
+            <div class="incident-details">
+                <span><strong>Date:</strong> 2024-10-15</span>
+                <span><strong>Time:</strong> 9:06 PST</span>
+                <span><strong>Phone:</strong> +1 (510) 859-8647</span>
+                <span><strong>Origin:</strong>Berkeley, CA</span>
+            </div>
+            <p>Initial call was automated/robo, indicating that an attempt to change my password had occurred, and that I should press "1" if I did not authorize it.  I pressed "1".  I received the second call.  A human (possibly Eastern European?) asked to verify my identity, but stated my email address as though it were my name.  He indicated that they had locked my account to protect my assets, and they would need me to create a new wallet using "cold storage" or an "external wallet" so that I could receive the funds.  He told me I would need to download the Coinbase Wallet app, or use my own external wallet address. Call ended.</p>
+        </li>
+    </ul>
+
+    <footer>
+        <p>If you've experienced a similar scam, consider reporting it.</p>
+    </footer>
+
+    <button id="backToTop" title="Back to Top">↑</button>
+
+    <script>
+        // Back to Top button functionality
+        let backToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        backToTopButton.onclick = function() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const c = document.documentElement.scrollTop || document.body.scrollTop;
+            if (c > 0) {
+                window.requestAnimationFrame(smoothScrollToTop);
+                window.scrollTo(0, c - c / 8);
+            }
+        }
+    </script>
+</body>
+</html>
