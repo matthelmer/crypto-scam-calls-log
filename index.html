@@ -4,37 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Scam Tracker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --background-color: #f8f9fa;
+            --primary-color: #0476f6;
+            --secondary-color: #3498db;
+            --background-color: #f5f7fa;
             --card-background: #ffffff;
             --text-color: #333;
             --text-light: #666;
         }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            max-width: 900px;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
-            background-color: var(--background-color);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
         }
         h1 {
-            font-size: 3em;
-            color: var(--secondary-color);
-            margin-bottom: 0.3em;
-            text-align: center;
-            font-weight: 700;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
         .subtitle {
-            font-size: 1.2em;
-            color: var(--text-light);
-            margin-bottom: 3em;
-            text-align: center;
+            font-size: 1.1em;
+            font-weight: 300;
+            margin-bottom: 0;
         }
         .incident-list {
             list-style-type: none;
@@ -42,109 +48,96 @@
         }
         .incident {
             background-color: var(--card-background);
-            border-radius: 12px;
-            padding: 30px;
+            border-radius: 8px;
+            padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        .incident:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         .incident h2 {
-            font-size: 1.5em;
-            margin: 0 0 15px 0;
-            color: var(--primary-color);
-            font-weight: 600;
+            font-size: 1.4em;
+            color: var(--secondary-color);
+            margin-top: 0;
         }
         .incident-details {
-            font-size: 0.95em;
-            color: var(--text-light);
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 15px;
-            background-color: rgba(52, 152, 219, 0.1);
-            padding: 10px;
-            border-radius: 8px;
+            font-size: 0.9em;
         }
         .incident-details span {
-            margin-right: 20px;
-            margin-bottom: 5px;
+            background-color: #e8f4fd;
+            padding: 5px 10px;
+            margin: 5px 10px 5px 0;
+            border-radius: 4px;
         }
         .incident p {
-            margin-top: 15px;
-            line-height: 1.8;
+            margin-bottom: 0;
         }
         footer {
-            margin-top: 60px;
-            font-size: 0.9em;
-            color: var(--text-light);
             text-align: center;
+            padding: 20px 0;
+            background-color: var(--primary-color);
+            color: white;
         }
         #backToTop {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--primary-color);
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--secondary-color);
             color: white;
             border: none;
             border-radius: 50%;
             width: 50px;
             height: 50px;
-            text-align: center;
-            line-height: 50px;
+            font-size: 24px;
             cursor: pointer;
             display: none;
-            font-size: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        #backToTop:hover {
-            background-color: var(--secondary-color);
-            transform: scale(1.1);
+            transition: opacity 0.3s;
         }
     </style>
 </head>
 <body>
-    <h1>Crypto Scam Tracker</h1>
-    <p class="subtitle">Documenting real cryptocurrency scam incidents to raise awareness.</p>
+    <header>
+        <h1>Crypto Scam Tracker</h1>
+        <p class="subtitle">Documenting real cryptocurrency scam incidents to raise awareness</p>
+    </header>
 
-    <ul class="incident-list">
-
-        <li class="incident">
-            <h2>Fake Coinbase Withdrawal - Robo Call</h2>
-            <div class="incident-details">
-                <span><strong>Date:</strong> 2024-10-15</span>
-                <span><strong>Time:</strong> 15:57 PST</span>
-                <span><strong>Phone:</strong> +1 (888) 730-0862</span>
-                <span><strong>Origin:</strong> Unknown</span>
-            </div>
-            <div class="incident-details">
-                <span><strong>Date:</strong> 2024-10-15</span>
-                <span><strong>Time:</strong> 14:34 PST</span>
-                <span><strong>Phone:</strong> +1 (503) 877-8316</span>
-                <span><strong>Origin:</strong> Salem, OR</span>
-            </div>
-            <p>Initial call was automated/robo, indicating that an attempt to withdraw my assets had occurred, and that I should press "1" if I did not authorize it.  I pressed "1".  I received the second call.  A human (again possibly Eastern European, but different from earlier; honestly, I may have spoken with him a few months earlier in exact same scam) stated he was from Coinbase Consumer Asset Protection team (or something similar). I asked him to clarify multiple times and call ended.</p>
-        </li>
-        <li class="incident">
-            <h2>Fake Coinbase Password Change - Robo Call</h2>
-            <div class="incident-details">
-                <span><strong>Date:</strong> 2024-10-15</span>
-                <span><strong>Time:</strong> 9:03 PST</span>
-                <span><strong>Phone:</strong> +1 (415) 843-1515</span>
-                <span><strong>Origin:</strong> Mill Valley, CA</span>
-            </div>
-            <div class="incident-details">
-                <span><strong>Date:</strong> 2024-10-15</span>
-                <span><strong>Time:</strong> 9:06 PST</span>
-                <span><strong>Phone:</strong> +1 (510) 859-8647</span>
-                <span><strong>Origin:</strong> Berkeley, CA</span>
-            </div>
-            <p>Initial call was automated/robo, indicating that an attempt to change my password had occurred, and that I should press "1" if I did not authorize it.  I pressed "1".  I received the second call.  A human (possibly Eastern European?) asked to verify my identity, but stated my email address as though it were my name.  He indicated that they had locked my account to protect my assets, and they would need me to create a new wallet using "cold storage" or an "external wallet" so that I could receive the funds.  He told me I would need to download the Coinbase Wallet app, or use my own external wallet address. Call ended.</p>
-        </li>
-    </ul>
+    <div class="container">
+        <ul class="incident-list">
+            <li class="incident">
+                <h2>Fake Coinbase Withdrawal - Robo Call</h2>
+                <div class="incident-details">
+                    <span><strong>Date:</strong> 2024-10-15</span>
+                    <span><strong>Time:</strong> 15:57 PST</span>
+                    <span><strong>Phone:</strong> +1 (888) 730-0862</span>
+                    <span><strong>Origin:</strong> Unknown</span>
+                </div>
+                <div class="incident-details">
+                    <span><strong>Date:</strong> 2024-10-15</span>
+                    <span><strong>Time:</strong> 14:34 PST</span>
+                    <span><strong>Phone:</strong> +1 (503) 877-8316</span>
+                    <span><strong>Origin:</strong> Salem, OR</span>
+                </div>
+                <p>Initial call was automated/robo, indicating that an attempt to withdraw my assets had occurred, and that I should press "1" if I did not authorize it. I pressed "1". I received the second call. A human (again possibly Eastern European, but different from earlier; honestly, I may have spoken with him a few months earlier in exact same scam) stated he was from Coinbase Consumer Asset Protection team (or something similar). I asked him to clarify multiple times and call ended.</p>
+            </li>
+            <li class="incident">
+                <h2>Fake Coinbase Password Change - Robo Call</h2>
+                <div class="incident-details">
+                    <span><strong>Date:</strong> 2024-10-15</span>
+                    <span><strong>Time:</strong> 9:03 PST</span>
+                    <span><strong>Phone:</strong> +1 (415) 843-1515</span>
+                    <span><strong>Origin:</strong> Mill Valley, CA</span>
+                </div>
+                <div class="incident-details">
+                    <span><strong>Date:</strong> 2024-10-15</span>
+                    <span><strong>Time:</strong> 9:06 PST</span>
+                    <span><strong>Phone:</strong> +1 (510) 859-8647</span>
+                    <span><strong>Origin:</strong> Berkeley, CA</span>
+                </div>
+                <p>Initial call was automated/robo, indicating that an attempt to change my password had occurred, and that I should press "1" if I did not authorize it. I pressed "1". I received the second call. A human (possibly Eastern European?) asked to verify my identity, but stated my email address as though it were my name. He indicated that they had locked my account to protect my assets, and they would need me to create a new wallet using "cold storage" or an "external wallet" so that I could receive the funds. He told me I would need to download the Coinbase Wallet app, or use my own external wallet address. Call ended.</p>
+            </li>
+        </ul>
+    </div>
 
     <footer>
         <p>If you've experienced a similar scam, please report it to help protect others.</p>
@@ -152,32 +145,21 @@
 
     <button id="backToTop" title="Back to Top">↑</button>
 
-
     <script>
-        // Back to Top button functionality
         let backToTopButton = document.getElementById("backToTop");
 
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
+        window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 backToTopButton.style.display = "block";
             } else {
                 backToTopButton.style.display = "none";
             }
-        }
+        };
 
         backToTopButton.onclick = function() {
-            smoothScrollToTop();
-        }
-
-        function smoothScrollToTop() {
-            const c = document.documentElement.scrollTop || document.body.scrollTop;
-            if (c > 0) {
-                window.requestAnimationFrame(smoothScrollToTop);
-                window.scrollTo(0, c - c / 8);
-            }
-        }
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
     </script>
 </body>
 </html>
